@@ -22,7 +22,7 @@ func nurbleRequestHandler(w http.ResponseWriter, r *http.Request) {
 	text = nurble(text)
 	safe := template.HTMLEscapeString(text)
 	safe = strings.Replace(safe, "\n", "<br>", -1)
-	safe = strings.Replace(safe, "nurble", "<span class='nurble'>nurble</span>", -1)
+	safe = strings.Replace(safe, "nurble", " <span class='nurble'>nurble</span> ", -1)
 	templates.ExecuteTemplate(w, "nurble.html", template.HTML(safe))
 }
 
@@ -33,8 +33,8 @@ func nurble(text string) string {
 
 	for _, word := range splitWords {
 		if NOUNS[word] == false {
-			pattern := regexp.MustCompile(word)
-			upper = pattern.ReplaceAllString(upper, "nurble")
+			pattern := regexp.MustCompile(" " + word + " ")
+			upper = pattern.ReplaceAllString(upper, " nurble ")
 		}
 	}
 
