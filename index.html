@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Go Nurblizer</title>
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+		<style>
+			* {box-sizing:border-box}
+			body{background:#333 url(http://i.imgur.com/XcwKeZM.png) repeat top left}
+			.container{margin-top:20px}
+			.content{background:#fff;padding:1em;border-radius:5px}
+			.twitter{text-align:right}
+			textarea{display: block;width:100%;height:24em;padding:10px}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="span8 offset2 content">
+				<h1>Nurblizer</h1>
+				<form action="/nurble" method="post">
+					<fieldset>
+							<label for="text">Text to nurblize:</label>
+							<textarea name="text" id="text"></textarea>
+							<button class="btn btn-primary btn-block" type="submit">Nurblize Away!</button>
+					</fieldset>
+				</form>
+				<div class="row">
+					<div class="span3"><a href="http://adambard.com/blog/PHP-ruby-python-clojure-webapps-by-example/">wtf?</a></div>
+					<div class="span3 pull-right twitter"><a href="https://twitter.com/nickpresta">@nickpresta</a></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
