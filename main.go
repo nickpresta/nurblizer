@@ -67,7 +67,7 @@ func main() {
 
 	http.HandleFunc("/", mainRequestHandler)
 	http.HandleFunc("/nurble", nurbleRequestHandler)
-	err := http.ListenAndServe(":8080", http.DefaultServeMux)
+	err := http.ListenAndServe(":17562", http.DefaultServeMux)
 	if err != nil {
 		log.Fatal(err)
 	}
